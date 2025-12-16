@@ -1,7 +1,7 @@
 import React from 'react'
 import {words} from "../constance/index.jsx";
 import Button from "../components/button.jsx";
-import HeroExperience from "../components/hero-experience.jsx";
+import HeroExperience from "../components/heromodels/hero-experience.jsx";
 
 export default function Hero() {
     return (
