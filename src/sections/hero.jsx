@@ -2,8 +2,23 @@ import React from 'react'
 import {words} from "../constance/index.jsx";
 import Button from "../components/button.jsx";
 import HeroExperience from "../components/heromodels/hero-experience.jsx";
+import {useGSAP} from "@gsap/react";
+import gsap from 'gsap'
 
 export default function Hero() {
+    useGSAP(()=> {
+        gsap.fromTo('.hero-text h1, p, button',{
+            y: 50,
+            opacity: 0,
+        },
+        {
+           y: 0,
+           opacity: 1,
+           stagger: 0.2,
+           duration: 1,
+            ease: 'power2.inOut'
+        })
+    })
     return (
         <section id="hero" className="relative overflow-hidden">
             <div className="absolute top-0 left-0 z-10">
@@ -34,7 +49,7 @@ export default function Hero() {
                             Hi, I am Emmanuel, a software developer based in Lagos, Nigeria with a passion of
                             algorithm.
                         </p>
-                        <Button className="md:w-80 md:h-16 w-60 h-12" id="button" text="See my Work"/>
+                        <Button className="button md:w-80 md:h-16 w-60 h-12" id="button" text="See my Work"/>
                     </div>
                 </header>
                 <figure>
