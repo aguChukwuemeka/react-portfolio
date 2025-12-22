@@ -3,7 +3,8 @@ import {words} from "../constance/index.jsx";
 import Button from "../components/button.jsx";
 import HeroExperience from "../components/heromodels/hero-experience.jsx";
 import {useGSAP} from "@gsap/react";
-import gsap from 'gsap'
+import gsap from 'gsap';
+import AnimatedCounter from "./animated-counter.jsx";
 
 export default function Hero() {
     useGSAP(()=> {
@@ -14,8 +15,8 @@ export default function Hero() {
         {
            y: 0,
            opacity: 1,
-           stagger: 0.2,
-           duration: 1,
+           stagger: 0.5,
+           duration: 3,
             ease: 'power2.inOut'
         })
     })
@@ -58,6 +59,7 @@ export default function Hero() {
                     </div>
                 </figure>
             </div>
+            <AnimatedCounter />
         </section>
     )
 }
