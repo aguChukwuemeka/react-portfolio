@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import {words} from "../constance/index.jsx";
 import Button from "../components/button.jsx";
 import HeroExperience from "../components/heromodels/hero-experience.jsx";
@@ -20,6 +20,7 @@ export default function Hero() {
             ease: 'power2.inOut'
         })
     })
+
     return (
         <section id="hero" className="relative overflow-hidden">
             <div className="absolute top-0 left-0 z-10">
@@ -50,12 +51,14 @@ export default function Hero() {
                             Hi, I am Emmanuel, a software developer based in Lagos, Nigeria with a passion of
                             algorithm.
                         </p>
-                        <Button className="button md:w-80 md:h-16 w-60 h-12" id="button" text="See my Work"/>
+                        <button className="md:w-80 md:h-16 w-60 h-12">
+                            <Button className="button" id="button" text="See my Work" />
+                        </button>
                     </div>
                 </header>
                 <figure>
                     <div className="hero-3d-layout">
-                        <HeroExperience />
+                        {/*<HeroExperience />*/}
                     </div>
                 </figure>
             </div>
